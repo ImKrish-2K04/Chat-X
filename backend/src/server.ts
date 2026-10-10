@@ -1,6 +1,6 @@
 import { env } from "./configs/env.config.js";
 import { createApp } from "./app.js";
-import http from "http";
+import http from "node:http";
 
 const PORT: number = env.PORT || 4000;
 

@@ -1,8 +1,8 @@
 import morgan from "morgan";
 import type { Request } from "express";
 import { createStream } from "rotating-file-stream";
-import path from "path";
-import fs from "fs";
+import path from "node:path";
+import fs from "node:fs";
 
 morgan.token("safe-url", (req: Request) => {
   return req.url.replace(/([?&]token=)[^&]*/g, "$1[REDACTED]");
